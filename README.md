@@ -1,6 +1,6 @@
 # af-pro-display-bin
 
-AUR package for [af-pro-display](https://github.com/nishtahir/antec-flux-pro-display) by [nishtahir](https://github.com/nishtahir), a systemd service that shows CPU and GPU temperatures on the [Antec Flux Pro](https://www.antec.com/product/case/flux-pro) case display under Linux.
+AUR package for [af-pro-display](https://github.com/KylerianHD/antec-flux-pro-display), a systemd service that shows real-time CPU and GPU temperatures on the [Antec Flux Pro](https://www.antec.com/product/case/flux-pro) case display under Linux.
 
 ## Installation
 
@@ -23,17 +23,9 @@ Then enable the service:
 sudo systemctl enable --now af-pro-display
 ```
 
-## USB access
-
-USB access is handled automatically via the bundled udev rule using the `uaccess` tag. After installing, reconnect the display or reload udev rules if the device was already plugged in:
-
-```bash
-sudo udevadm control --reload-rules && sudo udevadm trigger
-```
-
 ## Configuration
 
-The service reads `~/.config/af-pro-display/config.toml`. Example:
+The service reads `/root/.config/af-pro-display/config.toml`. Example:
 
 ```toml
 cpu_device = "/sys/class/hwmon/hwmon0/temp1_input"
@@ -52,10 +44,10 @@ sudo systemctl enable af-pro-display
 
 ## Credits
 
-- [nishtahir/antec-flux-pro-display](https://github.com/nishtahir/antec-flux-pro-display) - upstream project
+- [KylerianHD/antec-flux-pro-display](https://github.com/KylerianHD/antec-flux-pro-display) - upstream project
+- This is a fork of [nishtahir/antec-flux-pro-display](https://github.com/nishtahir/antec-flux-pro-display)
 
 ## License
 
 The packaging files in this repository are licensed under [GPL-3.0](LICENSE).
-The packaged software itself is licensed under [GPL-3.0](https://github.com/nishtahir/antec-flux-pro-display/blob/main/LICENSE).
-
+The packaged software itself is licensed under [GPL-3.0](https://github.com/KylerianHD/antec-flux-pro-display/blob/main/LICENSE).
