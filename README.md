@@ -45,7 +45,6 @@ sudo systemctl enable af-pro-display
 ## Credits
 
 - [KylerianHD/antec-flux-pro-display](https://github.com/KylerianHD/antec-flux-pro-display) - upstream project
-- This is a fork of [nishtahir/antec-flux-pro-display](https://github.com/nishtahir/antec-flux-pro-display)
 
 ## License
 
